@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our extensive collection of web development articles, tutorials, and insights in design, programming, React, Node.js, and DevOps.">
+  <meta name="keywords" content="blogs, articles, web design, React, programming, tutorials, DevOps, Node.js">
+  <meta name="author" content="TechBlog">
+  <meta property="og:title" content="All Articles — TechBlog">
+  <meta property="og:description" content="Explore our full library of technology articles and tutorials.">
+  <meta property="og:site_name" content="TechBlog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techblog.com/blogs">
+  <meta property="og:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <meta property="og:image:alt" content="TechBlog preview image">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Articles — TechBlog">
+  <meta name="twitter:description" content="Explore our full library of technology articles and tutorials.">
+  <meta name="twitter:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <title>All Articles — TechBlog | Technology Blogs & Tutorials</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f5f3f0] text-[#1a1a1a] dark:bg-[#0a0a0f] dark:text-[#f0ede8] font-[DM_Sans,sans-serif]">
+
+  <!-- Nav -->
+  <header>
+  <nav class="fixed top-0 left-0 right-0 z-50 relative flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 lg:py-5 backdrop-blur-xl bg-[#f5f3f0]/70 dark:bg-[#0a0a0f]/70 border-b border-gray-300 dark:border-white/7 dark:border-black/10">
+    <a href="index.html" class="font-[Syne,sans-serif] text-lg sm:text-xl font-extrabold tracking-tight text-[#0a0a0f] dark:text-[#f0ede8]">Tech<span class="text-[#3b82f6]">Blog</span></a>
+
+    <div class="flex items-center gap-3 sm:gap-4">
+      <div class="hidden md:flex items-center gap-6 lg:gap-9">
+        <a href="index.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Home</a>
+        <a href="blogs.html" class="text-[#1a1a1a] dark:text-[#f0ede8] text-sm font-medium">Blogs</a>
+        <a href="about.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">About</a>
+        <a href="contact.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Contact</a>
+      </div>
+
+      <button id="theme-toggle" onclick="darkModeToggle()" title="Toggle Dark Mode" class="bg-[#3b82f6] text-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:opacity-85 transition-opacity">Dark</button>
+
+      <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" title="Menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 text-[#1a1a1a] dark:text-[#f0ede8] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+        <i class="fas fa-bars text-sm" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute left-4 right-4 top-full mt-3 rounded-2xl border border-gray-300 dark:border-white/10 bg-[#f5f3f0]/95 dark:bg-[#0a0a0f]/95 backdrop-blur-xl p-3">
+      <a href="index.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Home</a>
+      <a href="blogs.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium bg-black/5 dark:bg-white/5 text-[#1a1a1a] dark:text-[#f0ede8]">Blogs</a>
+      <a href="about.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">About</a>
+      <a href="contact.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Contact</a>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+  <!-- Header -->
+  <section class="pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-14 lg:pb-16 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#3b82f6] animate-pulse"></span>
+      All Articles
+    </div>
+    <h1 class="font-[Syne,sans-serif] text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-4">Every article,<br><span class="text-[#7c6fff]">all in one place.</span></h1>
+    <p class="text-[#9693a0] text-lg font-light max-w-lg">Browse our full library of tutorials, deep dives, and engineering insights.</p>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto mb-12">
+    <div class="flex items-center gap-3 flex-wrap">
+      <button onclick="filterPosts('all')" id="btn-all" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-white/10 bg-[#3b82f6] text-white transition-all">All</button>
+      <button onclick="filterPosts('design')" id="btn-design" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-gray-300 dark:border-white/10 text-[#666666] dark:text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] hover:border-gray-400 dark:hover:border-white/20 transition-all">Web Design</button>
+      <button onclick="filterPosts('programming')" id="btn-programming" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-gray-300 dark:border-white/10 text-[#666666] dark:text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] hover:border-gray-400 dark:hover:border-white/20 transition-all">Programming</button>
+      <button onclick="filterPosts('react')" id="btn-react" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-gray-300 dark:border-white/10 text-[#666666] dark:text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] hover:border-gray-400 dark:hover:border-white/20 transition-all">React</button>
+      <button onclick="filterPosts('tutorials')" id="btn-tutorials" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-gray-300 dark:border-white/10 text-[#666666] dark:text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] hover:border-gray-400 dark:hover:border-white/20 transition-all">Tutorials</button>
+      <button onclick="filterPosts('devops')" id="btn-devops" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-gray-300 dark:border-white/10 text-[#666666] dark:text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] hover:border-gray-400 dark:hover:border-white/20 transition-all">DevOps</button>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <div class="px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto mb-14">
+    <div class="relative max-w-md">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#5a5770] dark:text-[#888888] text-lg"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+      <input id="post-search" type="text" oninput="searchPosts(this.value)" placeholder="Search articles..." class="w-full bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-xl pl-11 pr-5 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#3b82f6]/40 transition-colors">
+    </div>
+  </div>
+
+  <!-- Posts Grid -->
+  <section class="px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto pb-24" id="posts-grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid">
+
+      <!-- Post 1 -->
+      <a href="blog-detail.html?id=1" data-category="design" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="Top Web Design Trends to Watch in 2026">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#7c6fff]/15 text-[#7c6fff]">Web Design</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Top Web Design Trends to Watch in 2026</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Glassmorphism is out. Explore the movements shaping digital experiences this year.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Apr 8, 2026</span><span>·</span><span>7 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 2 -->
+      <a href="blog-detail.html?id=2" data-category="programming" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://miro.medium.com/1*3IcLSFuT8PQg4cUBaRXH1A.png" class="w-full h-48 object-cover" alt="Advanced Python Tips & Tricks for Senior Devs">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#ff6b6b]/15 text-[#ff6b6b]">Programming</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Advanced Python Tips & Tricks for Senior Devs</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Master Python with techniques that separate senior engineers from juniors.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Apr 3, 2026</span><span>·</span><span>8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 3 -->
+      <a href="blog-detail.html?id=3" data-category="react" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="React Hooks: The Complete Guide">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#3b82f6]/12 text-[#3b82f6]">React</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">React Hooks: The Complete Guide</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Everything about hooks — from useState to custom hooks that scale in production.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Mar 28, 2026</span><span>·</span><span>10 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 4 -->
+      <a href="blog-detail.html?id=4" data-category="tutorials" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="Build a REST API with Node.js & Express">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#1d9e75]/15 text-[#1d9e75]">Tutorials</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Build a REST API with Node.js & Express</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Step-by-step guide to building a production-ready API from scratch.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Mar 20, 2026</span><span>·</span><span>12 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 5 -->
+      <a href="blog-detail.html?id=5" data-category="devops" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="Docker & Kubernetes for Frontend Devs">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-white/8 text-[#9693a0]">DevOps</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Docker & Kubernetes for Frontend Devs</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Containers demystified — a pragmatic intro for developers who just want things to ship.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Mar 14, 2026</span><span>·</span><span>9 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 6 -->
+      <a href="blog-detail.html?id=6" data-category="design" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="CSS Grid Mastery: Advanced Layouts">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#7c6fff]/15 text-[#7c6fff]">Web Design</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">CSS Grid Mastery: Advanced Layouts</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Stop fighting with CSS. Here's how to use Grid like you actually know what you're doing.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Mar 7, 2026</span><span>·</span><span>6 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 7 -->
+      <a href="blog-detail.html?id=7" data-category="react" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="Next.js App Router: What Changed">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#3b82f6]/12 text-[#3b82f6]">React</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Next.js App Router: What Changed</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">A practical migration guide from Pages Router to App Router in Next.js 14+.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Feb 28, 2026</span><span>·</span><span>11 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 8 -->
+      <a href="blog-detail.html?id=8" data-category="programming" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="TypeScript Generics: Stop Being Afraid">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#ff6b6b]/15 text-[#ff6b6b]">Programming</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">TypeScript Generics: Stop Being Afraid</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Generics click once you see the right examples. Here are the ones that finally made it stick.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Feb 20, 2026</span><span>·</span><span>8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 9 -->
+      <a href="blog-detail.html?id=9" data-category="tutorials" class="post-card group block bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=600&h=350&fit=crop" class="w-full h-48 object-cover" alt="Build a Full-Stack App with Supabase">
+        <div class="p-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 bg-[#1d9e75]/15 text-[#1d9e75]">Tutorials</span>
+          <h2 class="font-[Syne,sans-serif] text-lg font-bold leading-snug mb-3 group-hover:text-[#3b82f6] transition-colors">Build a Full-Stack App with Supabase</h2>
+          <p class="text-sm text-[#9693a0] leading-relaxed mb-5">Auth, database, storage — all in one. Let's ship a real app using Supabase.</p>
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Feb 12, 2026</span><span>·</span><span>14 min read</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    <!-- Empty state -->
+    <div id="empty" class="hidden text-center py-24 text-[#5a5770] dark:text-[#888888]">
+      <div class="text-5xl mb-4"><i class="fas fa-circle-dot" aria-hidden="true"></i></div>
+      <p class="font-[Syne,sans-serif] text-xl font-bold text-[#9693a0]">No articles found</p>
+      <p class="text-sm mt-2">Try a different search or category.</p>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5f3f0] dark:bg-[#0a0a0f] border-t border-gray-300 dark:border-white/7 py-14 sm:py-16 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto text-center lg:text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 pb-12 border-b border-gray-300 dark:border-white/7">
+        <div>
+          <div class="font-[Syne,sans-serif] text-2xl font-extrabold mb-3 tracking-tight">Tech<span class="text-[#3b82f6]">Blog</span></div>
+          <p class="text-[#5a5770] dark:text-[#888888] text-sm leading-relaxed max-w-xs">Deep technical writing for developers who care about building things well.</p>
+          <a href="mailto:hello@techblog.com" class="mt-4 flex items-center justify-center lg:justify-start gap-2 text-sm text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            hello@techblog.com
+          </a>
+          <div class="mt-5 flex items-center justify-center lg:justify-start gap-4 text-base">
+            <a href="#" aria-label="TechBlog on X" title="X" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on GitHub" title="GitHub" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on LinkedIn" title="LinkedIn" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Home</a></li>
+            <li><a href="blogs.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Blogs</a></li>
+            <li><a href="about.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">About</a></li>
+            <li><a href="contact.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Topics</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Web Design</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Programming</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">React</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Tutorials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Privacy Policy</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Terms of Use</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-left text-xs text-[#5a5770] dark:text-[#888888] gap-4">
+        <span>© 2026 TechBlog. All rights reserved.</span>
+        <div class="flex flex-wrap justify-center lg:justify-end gap-x-5 gap-y-2">
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i> Twitter
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    let activeCategory = 'all';
+    let activeQuery = '';
+
+    const updateThemeButton = () => {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      const isDark = html.classList.contains('dark');
+      btn.textContent = isDark ? 'Light' : 'Dark';
+      btn.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    };
+
+    function darkModeToggle() {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+      updateThemeButton();
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+
+    const applyPostFilters = () => {
+      const cards = document.querySelectorAll('.post-card');
+      let visible = 0;
+      cards.forEach((card) => {
+        const cat = (card.getAttribute('data-category') || '').toLowerCase();
+        const title = (card.querySelector('h2')?.textContent || '').toLowerCase();
+        const show = (activeCategory === 'all' || cat === activeCategory) && (!activeQuery || title.includes(activeQuery));
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      document.getElementById('empty')?.classList.toggle('hidden', visible !== 0);
+    };
+
+    function filterPosts(category) {
+      activeCategory = (category || 'all').toLowerCase();
+      applyPostFilters();
+    }
+
+    function searchPosts(value) {
+      activeQuery = String(value || '').trim().toLowerCase();
+      applyPostFilters();
+    }
+
+    (() => {
+      const saved = localStorage.getItem('darkMode');
+      if (saved === 'true') html.classList.add('dark');
+      if (saved === 'false') html.classList.remove('dark');
+      updateThemeButton();
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
+

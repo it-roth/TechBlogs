@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top Web Design Trends to Watch in 2026 - A comprehensive guide to glassmorphism, bento grids, dark mode, variable fonts, and spatial UI with practical implementation tips.">
+  <meta name="keywords" content="web design, design trends 2026, UI design, CSS, web development">
+  <meta name="author" content="TechBlog">
+  <meta property="og:title" content="Top Web Design Trends 2026 — TechBlog">
+  <meta property="og:description" content="Glassmorphism is fading. Bento grids are everywhere. Here's what's shaping interfaces in 2026.">
+  <meta property="og:site_name" content="TechBlog">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://techblog.com/blog-detail.html">
+  <meta property="og:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <meta property="og:image:alt" content="TechBlog preview image">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Top Web Design Trends 2026 — TechBlog">
+  <meta name="twitter:description" content="Glassmorphism is fading. Bento grids are everywhere. Here's what's shaping interfaces in 2026.">
+  <meta name="twitter:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <title>Top Web Design Trends 2026 — TechBlog</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f5f3f0] text-[#1a1a1a] dark:bg-[#0a0a0f] dark:text-[#f0ede8] font-[DM_Sans,sans-serif] overflow-x-hidden">
+
+  <!-- Progress bar -->
+  <div id="progress" class="fixed top-0 left-0 h-0.5 bg-[#3b82f6] z-[200] transition-all duration-100" style="width:0%"></div>
+
+  <!-- Nav -->
+  <header>
+  <nav class="fixed top-0 left-0 right-0 z-50 relative flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 lg:py-5 backdrop-blur-xl bg-[#f5f3f0]/70 dark:bg-[#0a0a0f]/70 border-b border-gray-300 dark:border-white/7 dark:border-black/10">
+    <a href="index.html" class="font-[Syne,sans-serif] text-lg sm:text-xl font-extrabold tracking-tight text-[#0a0a0f] dark:text-[#f0ede8]">Tech<span class="text-[#3b82f6]">Blog</span></a>
+
+    <div class="flex items-center gap-3 sm:gap-4">
+      <div class="hidden md:flex items-center gap-6 lg:gap-9">
+        <a href="index.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Home</a>
+        <a href="blogs.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Blogs</a>
+        <a href="about.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">About</a>
+        <a href="contact.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Contact</a>
+      </div>
+
+      <button id="theme-toggle" onclick="darkModeToggle()" title="Toggle Dark Mode" class="bg-[#3b82f6] text-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:opacity-85 transition-opacity">Dark</button>
+
+      <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" title="Menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 text-[#1a1a1a] dark:text-[#f0ede8] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+        <i class="fas fa-bars text-sm" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute left-4 right-4 top-full mt-3 rounded-2xl border border-gray-300 dark:border-white/10 bg-[#f5f3f0]/95 dark:bg-[#0a0a0f]/95 backdrop-blur-xl p-3">
+      <a href="index.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Home</a>
+      <a href="blogs.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium bg-black/5 dark:bg-white/5 text-[#1a1a1a] dark:text-[#f0ede8]">Blogs</a>
+      <a href="about.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">About</a>
+      <a href="contact.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Contact</a>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+  <!-- Article -->
+  <article>
+  <section class="pt-24 sm:pt-28 lg:pt-32">
+
+    <header class="px-4 sm:px-6 lg:px-10 max-w-3xl mx-auto pb-10">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888] mb-8">
+        <a href="index.html" class="hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">Home</a>
+        <span>/</span>
+        <a href="blogs.html" class="hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">Blogs</a>
+        <span>/</span>
+        <span class="text-[#9693a0]">Web Design</span>
+      </nav>
+
+      <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5 bg-[#7c6fff]/15 text-[#7c6fff]">Web Design</span>
+
+      <h1 class="font-[Syne,sans-serif] text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+        Top Web Design Trends to Watch in 2026
+      </h1>
+
+      <p class="text-[#9693a0] text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-8">
+        Glassmorphism is fading. Bento grids are everywhere. Here's what's actually shaping the best interfaces in 2026 — and how to implement each trend thoughtfully.
+      </p>
+
+      <!-- Author + meta row -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 py-6 border-y border-gray-300 dark:border-white/7">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 rounded-full bg-[#7c6fff]/20 flex items-center justify-center font-[Syne,sans-serif] font-bold text-[#7c6fff] text-sm">LS</div>
+          <div>
+            <div class="font-medium text-sm text-[#1a1a1a] dark:text-[#f0ede8]">Leng Saroth</div>
+            <div class="text-xs text-[#5a5770] dark:text-[#888888]">Design & Frontend</div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-[#5a5770] dark:text-[#888888]">
+          <time datetime="2026-04-08">Apr 8, 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>7 min read</span>
+          <span aria-hidden="true">·</span>
+          <span>2.4k views</span>
+        </div>
+      </div>
+
+      <!-- Mobile share (sidebar is desktop-only) -->
+      <div class="mt-6 flex flex-wrap gap-2 lg:hidden">
+        <button onclick="share('twitter')" class="inline-flex items-center gap-2 text-xs font-semibold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5">
+          <i class="fab fa-x-twitter" aria-hidden="true"></i> Share
+        </button>
+        <button onclick="share('linkedin')" class="inline-flex items-center gap-2 text-xs font-semibold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+        </button>
+        <button onclick="copyLink()" class="inline-flex items-center gap-2 text-xs font-semibold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5">
+          <i class="fas fa-link" aria-hidden="true"></i> Copy link
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10 mb-14">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop" class="w-full rounded-2xl object-cover h-56 sm:h-72 md:h-80 lg:h-[420px]" alt="Web Design Trends 2026">
+    </div>
+
+    <!-- Two-column layout: content + sidebar -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 pb-20 sm:pb-24 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 items-start">
+
+      <!-- Main content -->
+      <div class="prose-content max-w-none">
+        <!-- Table of contents -->
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-xl p-6 mb-10">
+          <div class="text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-4">Table of contents</div>
+          <ol class="space-y-2 text-sm text-[#9693a0]">
+            <li><a href="#trend-1" class="hover:text-[#3b82f6] transition-colors flex items-center gap-2"><span class="text-[#5a5770] dark:text-[#888888] text-xs">01</span> Bento Grid Layouts</a></li>
+            <li><a href="#trend-2" class="hover:text-[#3b82f6] transition-colors flex items-center gap-2"><span class="text-[#5a5770] dark:text-[#888888] text-xs">02</span> Dark Mode as Default</a></li>
+            <li><a href="#trend-3" class="hover:text-[#3b82f6] transition-colors flex items-center gap-2"><span class="text-[#5a5770] dark:text-[#888888] text-xs">03</span> Variable Fonts</a></li>
+            <li><a href="#trend-4" class="hover:text-[#3b82f6] transition-colors flex items-center gap-2"><span class="text-[#5a5770] dark:text-[#888888] text-xs">04</span> Spatial & 3D UI</a></li>
+            <li><a href="#trend-5" class="hover:text-[#3b82f6] transition-colors flex items-center gap-2"><span class="text-[#5a5770] dark:text-[#888888] text-xs">05</span> Micro-interactions</a></li>
+          </ol>
+        </div>
+
+        <!-- Body copy -->
+        <p class="text-[#9693a0] text-lg font-light leading-relaxed mb-8">
+          Every year, a wave of design trends sweeps through the web. Some are cosmetic. Some are driven by new browser capabilities. And some reflect a genuine shift in how users expect to interact with digital products. In 2026, the most interesting trends are happening at the intersection of <span class="text-[#1a1a1a] dark:text-[#f0ede8]">technology, typography, and restraint</span>.
+        </p>
+
+        <h2 id="trend-1" class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-5 mt-14 pt-6 border-t border-white/7 dark:border-black/10">
+          <span class="text-[#7c6fff] mr-3 text-xl font-normal">01</span>Bento Grid Layouts
+        </h2>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-5">
+          Inspired by Apple's product pages and dashboard UIs, bento grids use a tight mosaic of cards — some large, some small — to present information at a glance. The format is information-dense but visually organized, and it maps perfectly to the way people scan rather than read.
+        </p>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-6">
+          The key to making bento layouts work is <span class="text-[#1a1a1a] dark:text-[#f0ede8] font-medium">visual hierarchy through size</span>. Not every card should be equal. One or two "hero" cells should dominate, with supporting cells providing context. Treat it like a newspaper layout — the front page, not a grid of thumbnails.
+        </p>
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 border-l-2 border-[#7c6fff] rounded-r-xl p-6 mb-8">
+          <p class="text-sm text-[#9693a0] leading-relaxed italic">Use CSS Grid with <code class="font-[DM_Mono,monospace] text-xs bg-[#ebe7e0] dark:bg-[#1a1a24] px-1.5 py-0.5 rounded text-[#3b82f6]">grid-template-areas</code> for named, semantic bento layouts. This makes the structure readable in code and easy to redesign later.</p>
+        </div>
+
+        <!-- Code block -->
+        <div class="bg-[#f5f3f0] dark:bg-[#0d0d14] border border-gray-300 dark:border-white/7 rounded-xl overflow-hidden mb-10">
+          <div class="flex items-center justify-between px-5 py-3 border-b border-gray-300 dark:border-white/7">
+            <span class="text-xs font-bold text-[#5a5770] dark:text-[#888888] uppercase tracking-widest">CSS</span>
+            <button onclick="copyCode(this)" class="text-xs text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">Copy</button>
+          </div>
+          <pre class="p-5 text-sm font-[DM_Mono,monospace] text-[#1a1a1a] dark:text-[#9693a0] overflow-x-auto leading-relaxed"><code>.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "hero  hero  side1 side2"
+    "hero  hero  side3 side4";
+  gap: 16px;
+}
+
+.hero  { grid-area: hero; }
+.side1 { grid-area: side1; }
+/* etc. */</code></pre>
+        </div>
+
+        <h2 id="trend-2" class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-5 mt-14 pt-6 border-t border-white/7 dark:border-black/10">
+          <span class="text-[#7c6fff] mr-3 text-xl font-normal">02</span>Dark Mode as Default
+        </h2>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-5">
+          For years, dark mode was an opt-in feature. In 2026, a growing number of developer tools, SaaS dashboards, and creative platforms are shipping dark-first — with a light mode available as the alternative. The data supports it: over 65% of developers report using dark mode as their primary preference.
+        </p>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-6">
+          Dark-first design isn't just about aesthetics. It forces more intentional use of color (since everything pops against a dark background), creates natural hierarchy through lightness, and reduces eye strain in low-light environments. The challenge is contrast — WCAG AA requires a 4.5:1 ratio for body text, which is easy to miss when using grays.
+        </p>
+
+        <h2 id="trend-3" class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-5 mt-14 pt-6 border-t border-white/7 dark:border-black/10">
+          <span class="text-[#7c6fff] mr-3 text-xl font-normal">03</span>Variable Fonts
+        </h2>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-5">
+          Variable fonts have been around since 2016, but 2026 is the year the design community has finally caught up. A single variable font file can express unlimited weights, widths, and optical sizes — and animating between them with CSS is trivial. The result is <span class="text-[#1a1a1a] dark:text-[#f0ede8] font-medium">typography that feels alive</span>.
+        </p>
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-xl p-6 mb-10 text-center">
+          <div class="font-[Syne,sans-serif] text-4xl font-extrabold mb-2 text-[#7c6fff]">Typography</div>
+          <div class="text-xs text-[#5a5770] dark:text-[#888888]">Hover to animate (try it in your own projects)</div>
+        </div>
+
+        <h2 id="trend-4" class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-5 mt-14 pt-6 border-t border-white/7 dark:border-black/10">
+          <span class="text-[#7c6fff] mr-3 text-xl font-normal">04</span>Spatial & 3D UI
+        </h2>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-5">
+          The launch of spatial computing platforms has pushed designers to think about depth, parallax, and layering more seriously. Even on flat screens, the best interfaces in 2026 use subtle z-axis cues — floating elements, layered cards, parallax scroll — to create a sense of physicality.
+        </p>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-6">
+          The key word is <em class="not-italic text-[#1a1a1a] dark:text-[#f0ede8]">subtle</em>. Heavy 3D effects feel dated fast. The trend is toward barely-there depth — a shadow that implies elevation, an element that shifts slightly on scroll, a card that breathes as it loads.
+        </p>
+
+        <h2 id="trend-5" class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-5 mt-14 pt-6 border-t border-white/7 dark:border-black/10">
+          <span class="text-[#7c6fff] mr-3 text-xl font-normal">05</span>Micro-interactions That Earn Attention
+        </h2>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-5">
+          Animation for animation's sake is out. The best micro-interactions in 2026 are purposeful: they confirm actions, guide attention, or communicate state. A button that compresses slightly when clicked. A success icon that draws itself. A skeleton that transitions smoothly into real content.
+        </p>
+        <p class="text-[#9693a0] text-base leading-relaxed mb-12">
+          The rule of thumb: if removing the animation makes the interface harder to understand, keep it. If it's purely decorative, cut it. Your users will thank you.
+        </p>
+
+        <!-- Author bio -->
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7 flex items-start gap-5 mt-14">
+          <div class="w-14 h-14 rounded-full bg-[#7c6fff]/20 flex-shrink-0 flex items-center justify-center font-[Syne,sans-serif] font-bold text-[#7c6fff] text-lg">LS</div>
+          <div>
+            <div class="font-[Syne,sans-serif] font-bold mb-1">Leng Saroth</div>
+            <div class="text-xs text-[#5a5770] dark:text-[#888888] uppercase tracking-widest mb-3">Design & Frontend Writer</div>
+            <p class="text-sm text-[#9693a0] leading-relaxed">Obsessed with CSS and design systems. Writes about UI/UX, animations, and Figma-to-code workflows.</p>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mt-10">
+          <span class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 text-[#9693a0] text-xs px-4 py-2 rounded-full hover:border-gray-400 dark:hover:border-white/20 cursor-pointer transition-colors">#webdesign</span>
+          <span class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 text-[#9693a0] text-xs px-4 py-2 rounded-full hover:border-gray-400 dark:hover:border-white/20 cursor-pointer transition-colors">#css</span>
+          <span class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 text-[#9693a0] text-xs px-4 py-2 rounded-full hover:border-gray-400 dark:hover:border-white/20 cursor-pointer transition-colors">#trends2026</span>
+          <span class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 text-[#9693a0] text-xs px-4 py-2 rounded-full hover:border-gray-400 dark:hover:border-white/20 cursor-pointer transition-colors">#ui</span>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sticky top-28 space-y-6 hidden lg:block">
+        <!-- Share -->
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-xl p-5">
+          <div class="text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-4">Share</div>
+          <div class="flex flex-col gap-2">
+            <button onclick="share('twitter')" class="flex items-center gap-3 text-sm text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+              <i class="fab fa-x-twitter text-base" aria-hidden="true"></i> Share on X
+            </button>
+            <button onclick="share('linkedin')" class="flex items-center gap-3 text-sm text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+              <i class="fab fa-linkedin-in text-base" aria-hidden="true"></i> Share on LinkedIn
+            </button>
+            <button onclick="copyLink()" class="flex items-center gap-3 text-sm text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+              <i class="fas fa-link" aria-hidden="true"></i> <span id="copy-link-text">Copy link</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Related -->
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-xl p-5">
+          <div class="text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-4">Related</div>
+          <div class="space-y-4">
+            <a href="blog-detail.html?id=6" class="block group">
+              <div class="text-xs text-[#7c6fff] mb-1 uppercase tracking-widest font-bold">Web Design</div>
+              <div class="text-sm font-medium text-[#9693a0] group-hover:text-[#1a1a1a] dark:group-hover:text-[#f0ede8] transition-colors leading-snug">CSS Grid Mastery: Advanced Layouts</div>
+            </a>
+            <div class="w-full h-px bg-gray-300 dark:bg-white/7"></div>
+            <a href="blog-detail.html?id=3" class="block group">
+              <div class="text-xs text-[#3b82f6] mb-1 uppercase tracking-widest font-bold">React</div>
+              <div class="text-sm font-medium text-[#9693a0] group-hover:text-[#1a1a1a] dark:group-hover:text-[#f0ede8] transition-colors leading-snug">React Hooks: The Complete Guide</div>
+            </a>
+            <div class="w-full h-px bg-gray-300 dark:bg-white/7"></div>
+            <a href="blog-detail.html?id=4" class="block group">
+              <div class="text-xs text-[#1d9e75] mb-1 uppercase tracking-widest font-bold">Tutorials</div>
+              <div class="text-sm font-medium text-[#9693a0] group-hover:text-[#1a1a1a] dark:group-hover:text-[#f0ede8] transition-colors leading-snug">Build a REST API with Node.js & Express</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter mini -->
+        <div class="bg-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#7c6fff]/10 dark:to-[#0a0a0f] border border-gray-300 dark:border-[#7c6fff]/20 rounded-xl p-5">
+          <div class="font-[Syne,sans-serif] font-bold text-sm mb-2">Enjoyed this?</div>
+          <p class="text-xs text-[#9693a0] leading-relaxed mb-4">Get weekly articles like this in your inbox.</p>
+          <form class="flex flex-col gap-2" onsubmit="quickSubscribe(event)">
+            <input type="email" placeholder="your@email.com" class="bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/10 rounded-lg px-3 py-2.5 text-xs text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#7c6fff]/40 transition-colors">
+            <button type="submit" class="bg-[#7c6fff] text-white py-2.5 rounded-lg text-xs font-bold hover:opacity-85 transition-opacity">Subscribe <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Key takeaways -->
+  <section class="border-t border-gray-300 dark:border-white/7 py-16 sm:py-20 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-bold uppercase tracking-widest text-[#3b82f6] mb-3">Summary</div>
+      <h2 class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-10">Key takeaways</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+          <div class="text-[#7c6fff] text-xl mb-3"><i class="fas fa-grip" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-2">Bento needs hierarchy</div>
+          <p class="text-sm text-[#9693a0]">Use 1–2 hero cells, then support cards. Named areas (<span class="font-[DM_Mono,monospace] text-xs bg-[#ebe7e0] dark:bg-[#1a1a24] px-1.5 py-0.5 rounded">grid-template-areas</span>) keep layouts readable.</p>
+        </div>
+
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+          <div class="text-[#3b82f6] text-xl mb-3"><i class="fas fa-moon" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-2">Design dark-first carefully</div>
+          <p class="text-sm text-[#9693a0]">Dark mode can improve focus, but contrast is easy to miss. Check your body text against WCAG and keep grays intentional.</p>
+        </div>
+
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+          <div class="text-[#1d9e75] text-xl mb-3"><i class="fas fa-font" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-2">Variable fonts add life</div>
+          <p class="text-sm text-[#9693a0]">A single font file can cover many weights and widths. Subtle transitions (not gimmicks) make typography feel modern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Articles -->
+  <section class="border-t border-gray-300 dark:border-white/7 py-16 sm:py-20 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-bold uppercase tracking-widest text-[#3b82f6] mb-3">Keep reading</div>
+      <h2 class="font-[Syne,sans-serif] text-3xl font-extrabold tracking-tight mb-10">More articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="blog-detail.html?id=2" class="group block bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://miro.medium.com/1*3IcLSFuT8PQg4cUBaRXH1A.png" class="w-full h-44 object-cover" alt="Advanced Python Tips & Tricks">
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-[#ff6b6b]/15 text-[#ff6b6b]">Programming</span>
+            <h3 class="font-[Syne,sans-serif] font-bold text-base leading-snug group-hover:text-[#3b82f6] transition-colors">Advanced Python Tips & Tricks</h3>
+          </div>
+        </a>
+
+        <a href="blog-detail.html?id=3" class="group block bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop" class="w-full h-44 object-cover" alt="React Hooks: The Complete Guide">
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-[#3b82f6]/12 text-[#3b82f6]">React</span>
+            <h3 class="font-[Syne,sans-serif] font-bold text-base leading-snug group-hover:text-[#3b82f6] transition-colors">React Hooks: The Complete Guide</h3>
+          </div>
+        </a>
+
+        <a href="blog-detail.html?id=4" class="group block bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-2xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop" class="w-full h-44 object-cover" alt="Build a REST API with Node.js & Express">
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 bg-[#1d9e75]/15 text-[#1d9e75]">Tutorials</span>
+            <h3 class="font-[Syne,sans-serif] font-bold text-base leading-snug group-hover:text-[#3b82f6] transition-colors">Build a REST API with Node.js & Express</h3>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5f3f0] dark:bg-[#0a0a0f] border-t border-gray-300 dark:border-white/7 py-14 sm:py-16 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto text-center lg:text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 pb-12 border-b border-gray-300 dark:border-white/7">
+        <div>
+          <div class="font-[Syne,sans-serif] text-2xl font-extrabold mb-3 tracking-tight">Tech<span class="text-[#3b82f6]">Blog</span></div>
+          <p class="text-[#5a5770] dark:text-[#888888] text-sm leading-relaxed max-w-xs">Deep technical writing for developers who care about building things well.</p>
+          <a href="mailto:hello@techblog.com" class="mt-4 flex items-center justify-center lg:justify-start gap-2 text-sm text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            hello@techblog.com
+          </a>
+          <div class="mt-5 flex items-center justify-center lg:justify-start gap-4 text-base">
+            <a href="#" aria-label="TechBlog on X" title="X" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on GitHub" title="GitHub" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on LinkedIn" title="LinkedIn" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Home</a></li>
+            <li><a href="blogs.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Blogs</a></li>
+            <li><a href="about.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">About</a></li>
+            <li><a href="contact.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Topics</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Web Design</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Programming</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">React</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Tutorials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Privacy Policy</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Terms of Use</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-left text-xs text-[#5a5770] dark:text-[#888888] gap-4">
+        <span>© 2026 TechBlog. All rights reserved.</span>
+        <div class="flex flex-wrap justify-center lg:justify-end gap-x-5 gap-y-2">
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i> Twitter
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    const updateThemeButton = () => {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      const isDark = html.classList.contains('dark');
+      btn.textContent = isDark ? 'Light' : 'Dark';
+      btn.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    };
+
+    function darkModeToggle() {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+      updateThemeButton();
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+
+    const updateProgress = () => {
+      const bar = document.getElementById('progress');
+      if (!bar) return;
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const ratio = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+      bar.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+    };
+
+    function share(platform) {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(document.title);
+      if (platform === 'twitter') window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'noopener,noreferrer');
+      if (platform === 'linkedin') window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+    }
+
+    async function copyLink() {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const el = document.getElementById('copy-link-text');
+        if (!el) return;
+        const prev = el.textContent;
+        el.textContent = 'Copied';
+        setTimeout(() => (el.textContent = prev), 1200);
+      } catch {}
+    }
+
+    async function copyCode(btn) {
+      try {
+        const container = btn?.closest('div')?.parentElement;
+        const pre = container?.querySelector('pre');
+        const code = pre?.querySelector('code');
+        const text = (code?.innerText || pre?.innerText || '').trim();
+        if (!text) return;
+        await navigator.clipboard.writeText(text);
+        const prev = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => (btn.textContent = prev), 1200);
+      } catch {}
+    }
+
+    function quickSubscribe(event) {
+      event?.preventDefault();
+      const form = event?.target;
+      const btn = form?.querySelector('button[type="submit"]');
+      if (!form || !btn) return;
+      const prev = btn.innerHTML;
+      btn.innerHTML = 'Subscribed';
+      setTimeout(() => (btn.innerHTML = prev), 1400);
+      form.reset();
+    }
+
+    (() => {
+      const saved = localStorage.getItem('darkMode');
+      if (saved === 'true') html.classList.add('dark');
+      if (saved === 'false') html.classList.remove('dark');
+      updateThemeButton();
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      });
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
+

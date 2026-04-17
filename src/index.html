@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deep dives into web development, design systems, and modern engineering — written for developers who care about their craft.">
+  <meta name="keywords" content="TechBlog, web development, design systems, JavaScript, TypeScript, React, CSS, tutorials">
+  <meta name="author" content="TechBlog">
+  <meta property="og:title" content="TechBlog — Technology & Web Development">
+  <meta property="og:description" content="Deep dives into web development, design systems, and modern engineering — written for developers who care about their craft.">
+  <meta property="og:site_name" content="TechBlog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techblog.com/">
+  <meta property="og:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <meta property="og:image:alt" content="TechBlog preview image">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TechBlog — Technology & Web Development">
+  <meta name="twitter:description" content="Deep dives into web development, design systems, and modern engineering — written for developers who care about their craft.">
+  <meta name="twitter:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <title>TechBlog — Technology & Web Development</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f5f3f0] text-[#1a1a1a] dark:bg-[#0a0a0f] dark:text-[#f0ede8] font-[DM_Sans,sans-serif] overflow-x-hidden">
+
+  <!-- Navigation -->
+  <header>
+  <nav class="fixed top-0 left-0 right-0 z-50 relative flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 lg:py-5 backdrop-blur-xl bg-[#f5f3f0]/70 dark:bg-[#0a0a0f]/70 border-b border-gray-300 dark:border-white/7 dark:border-black/10">
+    <a href="index.html" class="font-[Syne,sans-serif] text-lg sm:text-xl font-extrabold tracking-tight text-[#0a0a0f] dark:text-[#f0ede8]">Tech<span class="text-[#3b82f6]">Blog</span></a>
+
+    <div class="flex items-center gap-3 sm:gap-4">
+      <div class="hidden md:flex items-center gap-6 lg:gap-9">
+        <a href="index.html" class="text-[#1a1a1a] dark:text-[#f0ede8] text-sm font-medium">Home</a>
+        <a href="blogs.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Blogs</a>
+        <a href="about.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">About</a>
+        <a href="contact.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Contact</a>
+      </div>
+
+      <button id="theme-toggle" onclick="darkModeToggle()" title="Toggle Dark Mode" class="bg-[#3b82f6] text-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:opacity-85 transition-opacity">Dark</button>
+
+      <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" title="Menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 text-[#1a1a1a] dark:text-[#f0ede8] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+        <i class="fas fa-bars text-sm" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute left-4 right-4 top-full mt-3 rounded-2xl border border-gray-300 dark:border-white/10 bg-[#f5f3f0]/95 dark:bg-[#0a0a0f]/95 backdrop-blur-xl p-3">
+      <a href="index.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium bg-black/5 dark:bg-white/5 text-[#1a1a1a] dark:text-[#f0ede8]">Home</a>
+      <a href="blogs.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Blogs</a>
+      <a href="about.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">About</a>
+      <a href="contact.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Contact</a>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-10 py-24 sm:py-28 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 z-0 bg-gradient-to-br from-purple-600/10 via-transparent to-transparent"></div>
+    <div class="max-w-6xl mx-auto relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-7">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#3b82f6] animate-pulse"></span>
+            New articles every week
+          </div>
+          <h1 class="font-[Syne,sans-serif] text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none mb-6 text-[#080808] dark:text-[#f8f8f2]">Build the <em class="text-[#3b82f6] not-italic">future</em>, one line at a time.</h1>
+          <p class="text-[#4b5563] dark:text-[#d1d5db] text-lg font-light leading-relaxed mb-10 max-w-md">Deep dives into web development, design systems, and modern engineering — written for developers who care about their craft.</p>
+          <div class="flex items-center gap-5 mb-14 flex-wrap">
+            <a href="blogs.html" class="bg-[#3b82f6] text-white px-8 py-3.5 rounded-full font-[Syne,sans-serif] font-bold text-sm tracking-wide transition-all hover:shadow-lg hover:-translate-y-0.5">Explore Articles</a>
+            <a href="about.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors flex items-center gap-2">About us <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></a>
+          </div>
+          <div class="flex gap-8 pt-9 border-t border-gray-300 dark:border-white/7 dark:border-black/10 flex-wrap">
+            <div>
+              <div class="font-[Syne,sans-serif] text-3xl font-extrabold text-[#1a1a1a] dark:text-[#f0ede8]">200+</div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] uppercase tracking-widest mt-1">Articles</div>
+            </div>
+            <div>
+              <div class="font-[Syne,sans-serif] text-3xl font-extrabold text-[#1a1a1a] dark:text-[#f0ede8]">12k</div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] uppercase tracking-widest mt-1">Readers</div>
+            </div>
+            <div>
+              <div class="font-[Syne,sans-serif] text-3xl font-extrabold text-[#1a1a1a] dark:text-[#f0ede8]">4.9<i class="fas fa-star ml-1 text-[0.75em]" aria-hidden="true"></i></div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] uppercase tracking-widest mt-1">Rating</div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block relative h-96">
+          <div class="absolute w-72 h-80 top-0 left-10 bg-[#e5e1da] dark:bg-[#1a1a24] border border-gray-300 dark:border-white/7 dark:border-black/10 rounded-3xl overflow-hidden z-30 hover:shadow-lg transition-all animate-float-1">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" class="w-full h-1/2 object-cover" alt="Web Design">
+            <div class="p-4">
+              <div class="text-[10px] font-bold uppercase tracking-wider mb-2 text-[#7c6fff]">Web Design</div>
+              <div class="font-[Syne,sans-serif] text-sm font-bold leading-tight text-[#1a1a1a] dark:text-[#f0ede8]">Top Design Trends 2026</div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] mt-2">5 min read · 3 days ago</div>
+            </div>
+          </div>
+          <div class="absolute w-64 h-72 top-16 left-40 bg-[#ece9e5] dark:bg-[#111118] border border-gray-300 dark:border-white/7 dark:border-black/10 rounded-3xl overflow-hidden z-20 hover:shadow-lg transition-all animate-float-2">
+            <img src="https://miro.medium.com/1*3IcLSFuT8PQg4cUBaRXH1A.png" class="w-full h-1/2 object-cover" alt="Python">
+            <div class="p-4">
+              <div class="text-[10px] font-bold uppercase tracking-wider mb-2 text-[#ff6b6b]">Python</div>
+              <div class="font-[Syne,sans-serif] text-sm font-bold leading-tight text-[#1a1a1a] dark:text-[#f0ede8]">Advanced Python Tips</div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] mt-2">8 min read · 1 week ago</div>
+            </div>
+          </div>
+          <div class="absolute w-56 h-64 top-24 left-56 bg-[#ebe7e0] dark:bg-[#12121a] border border-gray-300 dark:border-white/7 dark:border-black/10 rounded-3xl overflow-hidden z-10 hover:shadow-lg transition-all animate-float-3">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" class="w-full h-1/2 object-cover" alt="React">
+            <div class="p-4">
+              <div class="text-[10px] font-bold uppercase tracking-wider mb-2 text-[#3b82f6]">React</div>
+              <div class="font-[Syne,sans-serif] text-sm font-bold leading-tight text-[#1a1a1a] dark:text-[#f0ede8]">React Hooks Guide</div>
+              <div class="text-xs text-[#888888] dark:text-[#888888] mt-2">10 min read · 2 weeks ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="py-5 px-4 sm:px-6 lg:px-10 border-t border-b border-gray-300 dark:border-white/7 dark:border-black/10 overflow-hidden">
+    <div class="animate-marquee hover:[animation-play-state:paused] flex gap-12 w-max">
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Web Development</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>React & Next.js</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Python</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>UI Design</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>TypeScript</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Performance</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Accessibility</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>DevOps</div>
+      <!-- Duplicate for infinite scroll -->
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Web Development</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>React & Next.js</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Python</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>UI Design</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>TypeScript</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Performance</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>Accessibility</div>
+      <div class="flex items-center gap-4 text-[#5a5770] dark:text-[#888888] font-[Syne,sans-serif] text-xs font-bold uppercase tracking-wider whitespace-nowrap"><span class="w-1 h-1 rounded-full bg-[#3b82f6]"></span>DevOps</div>
+    </div>
+  </div>
+
+  <!-- Featured Articles -->
+  <section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 pb-4">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-[#3b82f6] mb-3">Latest posts</div>
+        <h2 class="font-[Syne,sans-serif] text-5xl font-extrabold tracking-tight leading-tight">Featured Articles</h2>
+      </div>
+      <a href="blogs.html" class="text-[#9693a0] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap mt-4 md:mt-0">View all <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <!-- Big card -->
+      <a href="blog-detail.html?id=1" class="md:col-span-2 md:row-span-2 bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-3xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 transition-all hover:-translate-y-1">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop" class="w-full h-72 object-cover" alt="Web Design Trends">
+        <div class="p-8">
+          <span class="inline-block bg-purple-600/15 text-[#7c6fff] text-xs font-bold uppercase px-3 py-1 rounded-full mb-4">Web Design</span>
+          <h3 class="font-[Syne,sans-serif] text-3xl font-bold mb-4 leading-tight">Top Web Design Trends to Watch in 2026</h3>
+          <p class="text-[#9693a0] text-base mb-6">Glassmorphism is out. Brutal clarity is in. Explore the design movements shaping digital experiences this year.</p>
+          <div class="flex gap-4 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Apr 8, 2026</span>
+            <span class="w-1 h-1 rounded-full bg-[#5a5770]"></span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </a>
+      <!-- Side card 1 -->
+      <a href="blog-detail.html?id=2" class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-3xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 transition-all hover:-translate-y-1">
+        <img src="https://miro.medium.com/1*3IcLSFuT8PQg4cUBaRXH1A.png" class="w-full h-40 object-cover" alt="Python Tips">
+        <div class="p-6">
+          <span class="inline-block bg-red-600/15 text-[#ff6b6b] text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Programming</span>
+          <h3 class="font-[Syne,sans-serif] text-lg font-bold mb-3">Advanced Python Tips & Tricks</h3>
+          <p class="text-[#9693a0] text-sm mb-4">Master Python with advanced techniques senior developers use daily.</p>
+          <div class="flex gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Apr 3, 2026</span>
+            <span class="w-0.5 h-0.5 rounded-full bg-[#5a5770]"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </a>
+      <!-- Side card 2 -->
+      <a href="blog-detail.html?id=3" class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-3xl overflow-hidden hover:border-gray-400 dark:hover:border-white/15 transition-all hover:-translate-y-1">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop" class="w-full h-40 object-cover" alt="React Hooks">
+        <div class="p-6">
+          <span class="inline-block bg-blue-600/15 text-[#3b82f6] text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">React</span>
+          <h3 class="font-[Syne,sans-serif] text-lg font-bold mb-3">React Hooks: The Complete Guide</h3>
+          <p class="text-[#9693a0] text-sm mb-4">Everything about hooks — from useState to custom hooks that scale.</p>
+          <div class="flex gap-2 text-xs text-[#5a5770] dark:text-[#888888]">
+            <span>Mar 28, 2026</span>
+            <span class="w-0.5 h-0.5 rounded-full bg-[#5a5770]"></span>
+            <span>10 min read</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <div class="py-20 sm:py-24 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
+    <div class="mb-12">
+      <div class="text-xs font-bold uppercase tracking-widest text-[#3b82f6] mb-3">Explore</div>
+      <h2 class="font-[Syne,sans-serif] text-5xl font-extrabold tracking-tight text-[#1a1a1a] dark:text-[#f0ede8]">Browse Topics</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="#" class="bg-[#f5f3f0] dark:bg-[#12121a] border border-gray-300 dark:border-white/15 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-[#3b82f6]/40 transition-all relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity bg-gradient-radial from-purple-500/15 to-transparent"></div>
+        <div class="relative z-10">
+          <div class="text-3xl mb-4 text-[#1a1a1a] dark:text-[#f6ff92]"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] text-lg font-bold mb-2 text-[#1a1a1a] dark:text-[#f0ede8]">Web Design</div>
+          <div class="text-xs text-[#666666] dark:text-[#d8d8d8]">42 articles</div>
+          <span class="absolute top-6 right-6 text-[#666666] dark:text-[#f0ede8] text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="#" class="bg-[#f5f3f0] dark:bg-[#12121a] border border-gray-300 dark:border-white/15 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-[#3b82f6]/40 transition-all relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity bg-gradient-radial from-red-500/15 to-transparent"></div>
+        <div class="relative z-10">
+          <div class="text-3xl mb-4 text-[#1a1a1a] dark:text-[#f6ff92]"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] text-lg font-bold mb-2 text-[#1a1a1a] dark:text-[#f0ede8]">Programming</div>
+          <div class="text-xs text-[#666666] dark:text-[#d8d8d8]">78 articles</div>
+          <span class="absolute top-6 right-6 text-[#666666] dark:text-[#f0ede8] text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="#" class="bg-[#f5f3f0] dark:bg-[#12121a] border border-gray-300 dark:border-white/15 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-[#3b82f6]/40 transition-all relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity" style="background: radial-gradient(circle, rgba(59,130,246,0.15), transparent);"></div>
+        <div class="relative z-10">
+          <div class="text-3xl mb-4 text-[#1a1a1a] dark:text-[#f6ff92]"><i class="fas fa-atom" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] text-lg font-bold mb-2 text-[#1a1a1a] dark:text-[#f0ede8]">React & Next.js</div>
+          <div class="text-xs text-[#666666] dark:text-[#d8d8d8]">35 articles</div>
+          <span class="absolute top-6 right-6 text-[#666666] dark:text-[#f0ede8] text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a href="#" class="bg-[#f5f3f0] dark:bg-[#12121a] border border-gray-300 dark:border-white/15 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-[#3b82f6]/40 transition-all relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity bg-gradient-radial from-teal-500/15 to-transparent"></div>
+        <div class="relative z-10">
+          <div class="text-3xl mb-4 text-[#1a1a1a] dark:text-[#f6ff92]"><i class="fas fa-gem" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] text-lg font-bold mb-2 text-[#1a1a1a] dark:text-[#f0ede8]">Tutorials</div>
+          <div class="text-xs text-[#666666] dark:text-[#d8d8d8]">56 articles</div>
+          <span class="absolute top-6 right-6 text-[#666666] dark:text-[#f0ede8] text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-10 border-t border-b border-gray-300 dark:border-white/7">
+    <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+      <div>
+        <h2 class="font-[Syne,sans-serif] text-4xl font-extrabold mb-3 leading-tight">Stay in the<br><span class="text-[#3b82f6]">loop.</span></h2>
+        <p class="text-[#9693a0] text-base font-light">Weekly digest of the best dev articles, curated for you. No spam — ever.</p>
+      </div>
+      <form id="newsletter-form" class="flex flex-col gap-3" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="your@email.com" class="bg-[#f5f3f0] dark:bg-[#1a1a24] border border-gray-300 dark:border-white/7 rounded-2xl px-5 py-3.5 text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] text-sm outline-none focus:border-[#3b82f6]/40 transition-colors" required>
+        <button type="submit" class="bg-[#3b82f6] text-white px-7 py-3.5 rounded-2xl font-[Syne,sans-serif] font-bold text-sm tracking-wide hover:opacity-85 transition-opacity">Subscribe <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></button>
+        <span class="text-xs text-[#5a5770] dark:text-[#888888]">Join 12,000+ developers. Unsubscribe anytime.</span>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5f3f0] dark:bg-[#0a0a0f] border-t border-gray-300 dark:border-white/7 py-14 sm:py-16 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto text-center lg:text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 pb-12 border-b border-gray-300 dark:border-white/7">
+        <div>
+          <div class="font-[Syne,sans-serif] text-2xl font-extrabold mb-3 tracking-tight">Tech<span class="text-[#3b82f6]">Blog</span></div>
+          <p class="text-[#5a5770] dark:text-[#888888] text-sm leading-relaxed max-w-xs">Deep technical writing for developers who care about building things well.</p>
+          <a href="mailto:hello@techblog.com" class="mt-4 flex items-center justify-center lg:justify-start gap-2 text-sm text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            hello@techblog.com
+          </a>
+          <div class="mt-5 flex items-center justify-center lg:justify-start gap-4 text-base">
+            <a href="#" aria-label="TechBlog on X" title="X" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on GitHub" title="GitHub" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on LinkedIn" title="LinkedIn" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Home</a></li>
+            <li><a href="blogs.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Blogs</a></li>
+            <li><a href="about.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">About</a></li>
+            <li><a href="contact.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Topics</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Web Design</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Programming</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">React</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Tutorials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Privacy Policy</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Terms of Use</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-left text-xs text-[#5a5770] dark:text-[#888888] gap-4">
+        <span>© 2026 TechBlog. All rights reserved.</span>
+        <div class="flex flex-wrap justify-center lg:justify-end gap-x-5 gap-y-2">
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i> Twitter
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    const updateThemeButton = () => {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      const isDark = html.classList.contains('dark');
+      btn.textContent = isDark ? 'Light' : 'Dark';
+      btn.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    };
+
+    function darkModeToggle() {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+      updateThemeButton();
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+
+    function handleSubscribe(event) {
+      event?.preventDefault();
+      const form = event?.target;
+      const btn = form?.querySelector('button[type="submit"]');
+      if (!form || !btn) return;
+      const prev = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Subscribed';
+      setTimeout(() => {
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = prev;
+      }, 1200);
+    }
+
+    (() => {
+      const saved = localStorage.getItem('darkMode');
+      if (saved === 'true') html.classList.add('dark');
+      if (saved === 'false') html.classList.remove('dark');
+      updateThemeButton();
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
+

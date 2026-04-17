@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with TechBlog - contact us for article pitches, collaborations, sponsorships, or general inquiries about our web development community.">
+  <meta name="keywords" content="contact, TechBlog, write for us, collaboration, sponsorship">
+  <meta name="author" content="TechBlog">
+  <meta property="og:title" content="Contact TechBlog | Let's Talk">
+  <meta property="og:description" content="Have a topic suggestion? Want to write for us? Just want to say hi? We read every message.">
+  <meta property="og:site_name" content="TechBlog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techblog.com/contact">
+  <meta property="og:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <meta property="og:image:alt" content="TechBlog preview image">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact TechBlog | Let's Talk">
+  <meta name="twitter:description" content="Have a topic suggestion? Want to write for us? Just want to say hi? We read every message.">
+  <meta name="twitter:image" content="https://cdn5.f-cdn.com/contestentries/48020/8923254/5293384c176a5_thumb900.jpg">
+  <title>Contact — TechBlog | Get in Touch</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f5f3f0] text-[#1a1a1a] dark:bg-[#0a0a0f] dark:text-[#f0ede8] font-[DM_Sans,sans-serif] overflow-x-hidden">
+
+  <!-- Nav -->
+  <header>
+  <nav class="fixed top-0 left-0 right-0 z-50 relative flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 lg:py-5 backdrop-blur-xl bg-[#f5f3f0]/70 dark:bg-[#0a0a0f]/70 border-b border-gray-300 dark:border-white/7 dark:border-black/10">
+    <a href="index.html" class="font-[Syne,sans-serif] text-lg sm:text-xl font-extrabold tracking-tight text-[#0a0a0f] dark:text-[#f0ede8]">Tech<span class="text-[#3b82f6]">Blog</span></a>
+
+    <div class="flex items-center gap-3 sm:gap-4">
+      <div class="hidden md:flex items-center gap-6 lg:gap-9">
+        <a href="index.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Home</a>
+        <a href="blogs.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">Blogs</a>
+        <a href="about.html" class="text-[#666666] hover:text-[#1a1a1a] dark:text-[#9693a0] dark:hover:text-[#f0ede8] text-sm font-medium transition-colors">About</a>
+        <a href="contact.html" class="text-[#1a1a1a] dark:text-[#f0ede8] text-sm font-medium">Contact</a>
+      </div>
+
+      <button id="theme-toggle" onclick="darkModeToggle()" title="Toggle Dark Mode" class="bg-[#3b82f6] text-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:opacity-85 transition-opacity">Dark</button>
+
+      <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" title="Menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-white/10 text-[#1a1a1a] dark:text-[#f0ede8] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+        <i class="fas fa-bars text-sm" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute left-4 right-4 top-full mt-3 rounded-2xl border border-gray-300 dark:border-white/10 bg-[#f5f3f0]/95 dark:bg-[#0a0a0f]/95 backdrop-blur-xl p-3">
+      <a href="index.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Home</a>
+      <a href="blogs.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">Blogs</a>
+      <a href="about.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium text-[#666666] hover:text-[#1a1a1a] hover:bg-black/5 dark:hover:bg-white/5 dark:text-[#9693a0] dark:hover:text-[#f0ede8] transition-colors">About</a>
+      <a href="contact.html" onclick="closeMobileMenu()" class="block px-4 py-2 rounded-xl text-sm font-medium bg-black/5 dark:bg-white/5 text-[#1a1a1a] dark:text-[#f0ede8]">Contact</a>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+  <!-- Hero -->
+  <section class="relative pt-28 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-10 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 right-1/4 w-[500px] h-[300px] bg-[#3b82f6]/5 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-0 left-1/4 w-[400px] h-[300px] bg-[#7c6fff]/8 rounded-full blur-[100px]"></div>
+    </div>
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#3b82f6] animate-pulse"></span>
+        Get in touch
+      </div>
+      <h1 class="font-[Syne,sans-serif] text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-5">
+        Let's talk<span class="text-[#3b82f6]">.</span>
+      </h1>
+      <p class="text-[#9693a0] text-xl font-light leading-relaxed">
+        Have a topic suggestion? Want to write for us? Just want to say hi? We read every message.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact details -->
+  <section class="px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+        <div class="text-[#3b82f6] text-xl mb-3"><i class="fas fa-location-dot" aria-hidden="true"></i></div>
+        <div class="font-[Syne,sans-serif] font-bold mb-1">Based in</div>
+        <p class="text-sm text-[#9693a0]">Phnom Penh, Cambodia <span class="text-[#5a5770] dark:text-[#888888]">(ICT)</span></p>
+      </div>
+
+      <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+        <div class="text-[#7c6fff] text-xl mb-3"><i class="fas fa-clock" aria-hidden="true"></i></div>
+        <div class="font-[Syne,sans-serif] font-bold mb-1">Office hours</div>
+        <p class="text-sm text-[#9693a0]">Mon – Fri, 9:00 – 18:00</p>
+      </div>
+
+      <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+        <div class="text-[#1d9e75] text-xl mb-3"><i class="fas fa-file-lines" aria-hidden="true"></i></div>
+        <div class="font-[Syne,sans-serif] font-bold mb-1">Pitch guidelines</div>
+        <p class="text-sm text-[#9693a0]">Send a brief outline + why it matters. We reply within 48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="px-4 sm:px-6 lg:px-10 pb-20 sm:pb-28 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
+
+      <!-- Contact info -->
+      <div class="md:col-span-2 space-y-6 pt-4">
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-white/15 transition-colors">
+          <div class="text-[#3b82f6] text-xl mb-3"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-1">Email us</div>
+          <p class="text-sm text-[#9693a0] mb-3">For pitches, collabs, and general chat.</p>
+          <a href="mailto:hello@techblog.com" class="text-sm text-[#7c6fff] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors font-medium">hello@techblog.com</a>
+        </div>
+
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-white/15 transition-colors">
+          <div class="text-[#7c6fff] text-xl mb-3"><i class="fas fa-pen-nib" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-1">Write for us</div>
+          <p class="text-sm text-[#9693a0]">We're always looking for expert contributors. Pitch us your idea and we'll get back to you within 48 hours.</p>
+        </div>
+
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7 hover:border-gray-400 dark:hover:border-white/15 transition-colors">
+          <div class="text-[#ff6b6b] text-xl mb-3"><i class="fas fa-hashtag" aria-hidden="true"></i></div>
+          <div class="font-[Syne,sans-serif] font-bold mb-1">Follow us</div>
+          <p class="text-sm text-[#9693a0] mb-4">Get daily dev tips on social.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-xs font-bold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors uppercase tracking-wider">Twitter</a>
+            <a href="#" class="text-xs font-bold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors uppercase tracking-wider">GitHub</a>
+            <a href="#" class="text-xs font-bold text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors uppercase tracking-wider">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-7">
+          <div class="flex items-center gap-2 text-xs text-[#5a5770] dark:text-[#888888] mb-2">
+            <span class="w-2 h-2 rounded-full bg-[#1d9e75] animate-pulse"></span>
+            Response time
+          </div>
+          <div class="font-[Syne,sans-serif] font-bold text-[#1a1a1a] dark:text-[#f0ede8]">Usually within 24 hrs</div>
+          <p class="text-xs text-[#5a5770] dark:text-[#888888] mt-1">Mon – Fri, 9am – 6pm ICT</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="md:col-span-3">
+        <div class="bg-[#f5f3f0] dark:bg-[#111118] border border-gray-300 dark:border-white/7 rounded-2xl p-10">
+          <h2 class="font-[Syne,sans-serif] text-2xl font-extrabold tracking-tight mb-8">Send a message</h2>
+          <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
+
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <label for="first-name" class="block text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-2">First name</label>
+                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required placeholder="Alex" class="w-full bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-xl px-4 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#3b82f6]/40 transition-colors">
+              </div>
+              <div>
+                <label for="last-name" class="block text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-2">Last name</label>
+                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required placeholder="Kim" class="w-full bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-xl px-4 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#3b82f6]/40 transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-2">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" class="w-full bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-xl px-4 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#3b82f6]/40 transition-colors">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-2">Subject</label>
+              <select id="subject" name="subject" class="w-full bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-xl px-4 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] outline-none focus:border-[#3b82f6]/40 transition-colors appearance-none">
+                <option value="">Select a topic…</option>
+                <option>Article suggestion</option>
+                <option>Write for TechBlog</option>
+                <option>Partnership / sponsorship</option>
+                <option>Bug report</option>
+                <option>Just saying hi</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-bold uppercase tracking-widest text-[#5a5770] dark:text-[#888888] mb-2">Message</label>
+              <textarea id="message" name="message" required rows="5" placeholder="What's on your mind?" class="w-full bg-[#f5f3f0] dark:bg-[#0a0a0f] border border-gray-300 dark:border-white/7 rounded-xl px-4 py-3.5 text-sm text-[#1a1a1a] dark:text-[#f0ede8] placeholder:text-[#9693a0] dark:placeholder:text-[#5a5770] outline-none focus:border-[#3b82f6]/40 transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full bg-[#3b82f6] text-white py-4 rounded-xl font-[Syne,sans-serif] font-bold text-sm tracking-wide hover:opacity-85 transition-all hover:-translate-y-0.5 shadow-[0_0_30px_rgba(232,255,71,0.15)]">
+              Send Message <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <!-- Success state (hidden by default) -->
+          <div id="success-state" class="hidden text-center py-12">
+            <div class="text-5xl mb-5"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+            <h3 class="font-[Syne,sans-serif] text-2xl font-extrabold mb-3 text-[#3b82f6]">Message sent!</h3>
+            <p class="text-[#9693a0] text-sm">We'll get back to you within 24 hours.</p>
+            <button id="reset-btn" type="button" onclick="resetForm()" class="mt-6 text-sm text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors underline underline-offset-4">Send another message</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5f3f0] dark:bg-[#0a0a0f] border-t border-gray-300 dark:border-white/7 py-14 sm:py-16 px-4 sm:px-6 lg:px-10">
+    <div class="max-w-6xl mx-auto text-center lg:text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 pb-12 border-b border-gray-300 dark:border-white/7">
+        <div>
+          <div class="font-[Syne,sans-serif] text-2xl font-extrabold mb-3 tracking-tight">Tech<span class="text-[#3b82f6]">Blog</span></div>
+          <p class="text-[#5a5770] dark:text-[#888888] text-sm leading-relaxed max-w-xs">Deep technical writing for developers who care about building things well.</p>
+          <a href="mailto:hello@techblog.com" class="mt-4 flex items-center justify-center lg:justify-start gap-2 text-sm text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            hello@techblog.com
+          </a>
+          <div class="mt-5 flex items-center justify-center lg:justify-start gap-4 text-base">
+            <a href="#" aria-label="TechBlog on X" title="X" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on GitHub" title="GitHub" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TechBlog on LinkedIn" title="LinkedIn" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Home</a></li>
+            <li><a href="blogs.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Blogs</a></li>
+            <li><a href="about.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">About</a></li>
+            <li><a href="contact.html" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Topics</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Web Design</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Programming</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">React</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Tutorials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#9693a0] mb-5">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Privacy Policy</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">Terms of Use</a></li>
+            <li><a href="#" class="text-[#5a5770] dark:text-[#888888] hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] text-sm transition-colors hover:underline underline-offset-4">RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center text-center lg:text-left text-xs text-[#5a5770] dark:text-[#888888] gap-4">
+        <span>© 2026 TechBlog. All rights reserved.</span>
+        <div class="flex flex-wrap justify-center lg:justify-end gap-x-5 gap-y-2">
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i> Twitter
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 hover:text-[#1a1a1a] dark:hover:text-[#f0ede8] transition-colors hover:underline underline-offset-4">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    const updateThemeButton = () => {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      const isDark = html.classList.contains('dark');
+      btn.textContent = isDark ? 'Light' : 'Dark';
+      btn.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    };
+
+    function darkModeToggle() {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+      updateThemeButton();
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu) return;
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn?.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+
+    function handleSubmit(event) {
+      event?.preventDefault();
+
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('success-state');
+      const btn = document.getElementById('submit-btn');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.style.opacity = '0.85';
+        btn.textContent = 'Sending...';
+      }
+
+      setTimeout(() => {
+        form?.classList.add('hidden');
+        success?.classList.remove('hidden');
+      }, 500);
+    }
+
+    function resetForm() {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('success-state');
+      const btn = document.getElementById('submit-btn');
+
+      success?.classList.add('hidden');
+      if (form) {
+        form.classList.remove('hidden');
+        form.reset();
+      }
+
+      if (btn) {
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.innerHTML = 'Send Message <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>';
+      }
+    }
+
+    (() => {
+      const saved = localStorage.getItem('darkMode');
+      if (saved === 'true') html.classList.add('dark');
+      if (saved === 'false') html.classList.remove('dark');
+      updateThemeButton();
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
+
